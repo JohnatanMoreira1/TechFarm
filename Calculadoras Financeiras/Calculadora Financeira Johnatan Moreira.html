@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ptbr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Calculadora de Perdas e Ganhos</h1><br><br>
+    
+    Por que devemos calcular suas perdas e ganhos?<br><br>
+    
+    Hoje a falta de monitoramento de controle de umidade e temperatura nos armazenamentos de soja,<br> acabam prejudicando você do segmento,
+    fazendo com que perda cerca de 40% de sua colheita, trazendo um lucro bem inferior do que poderia conseguir!<br>
+    
+    Nós garantimos você conseguir ter uma safra com mais 30% de sucesso através da nossa solução!
+    
+    
+    <br><br><br>
+
+
+
+
+
+    
+   Quantidade de Hectares <input id="qtdhec"> <br>
+   Custo de plantil por Hectare <input id="custhec"><br>
+   Valor de venda por saca <input id="vendsaca"><br><br>
+   
+    <button onclick="calcular()">Calcular</button><br><br>
+
+
+    <div id="mostrar"></div>
+
+</body>
+</html>
+<script>
+
+    function calcular(){
+
+        
+        var hectare = 1
+        var plantasporhectare = 310000
+        var saca = 60
+        var venda = vendsaca.value;
+        var custo = custhec.value;
+        var qtdhectare = qtdhec.value;
+        
+        var totalplantas = plantasporhectare * qtdhectare;
+        var quantidadesacas = saca * qtdhectare;
+        var custototal = custo * qtdhectare;
+        var vendatotal = quantidadesacas * venda; 
+        var receitabrutasistema = vendatotal * 1.32;
+        var lucrosistema = (receitabrutasistema - custototal);
+        
+        mostrar.innerHTML=`<h4> Sem a nossa solução: </h4> Você plantou ${qtdhectare} hectare(s), teve o total de ${totalplantas} de plantas por hectare,
+        custo de R$${custototal},você perdeu 52% da safra por falta de monitoramento e obteve uma receita bruta de R$ ${vendatotal},
+         onde o seu lucro foi R$ ${vendatotal - custototal}<br><br>`
+
+        mostrar.innerHTML+=`<H4> Utilizando nossa solução: </H4>
+        Você plantou ${qtdhectare} hectare (s), teve o total de ${totalplantas} de plantas por hectare,
+        custo de R$${custototal}, com o nosso sistema monitorando 24 horas por dia,
+         você reduziu as suas perdas em 20% e obteve uma receita bruta de R$ ${receitabrutasistema}, onde o seu lucro foi R$ ${lucrosistema}`
+
+    }
+
+
+</script>
