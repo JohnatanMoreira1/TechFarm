@@ -12,9 +12,9 @@
     Por que devemos calcular suas perdas e ganhos?<br><br>
     
     Hoje a falta de monitoramento de controle de umidade e temperatura nos armazenamentos de soja,<br> acabam prejudicando você em seu segmento,
-    fazendo com que perca cerca de 52% de sua colheita, trazendo um lucro bem inferior do que poderia conseguir!<br>
+    fazendo com que perca cerca de 15% de sua colheita, trazendo um lucro bem inferior do que poderia conseguir!<br>
     
-    Nós garantimos a você conseguir ter uma safra com mais 32% de aproveitamento através da nossa solução!
+    Nós garantimos a você conseguir ter uma safra com mais 10% de aproveitamento através da nossa solução!
     
     
     <br><br><br>
@@ -25,7 +25,7 @@
 
     
    Quantidade de Hectares <input id="qtdhec" autofocus> <br>
-   Custo de plantil por Hectare <input id="custhec"><br>
+   Custo de plantio por Hectare <input id="custhec"><br>
    Valor de venda por saca <input id="vendsaca"><br><br>
    
     <button onclick="calcular()">Calcular</button><br><br>
@@ -51,19 +51,18 @@
         var quantidadesacas = saca * qtdhectare;
         var custototal = custo * qtdhectare;
         var vendatotal = quantidadesacas * venda; 
-        var desperdicio = vendatotal * 0.52;
+        var desperdicio = vendatotal * 0.30;
         var desperdiciosolu = vendatotal * 0.20;
         
         
         mostrar.innerHTML=`<h4> Sem a nossa solução: </h4> Você plantou ${qtdhectare} hectare(s), teve o total de ${totalplantas} de plantas por hectare,
-        custo de R$${custototal},você perdeu 52% da safra por falta de monitoramento e obteve uma receita bruta de R$ ${vendatotal},
+        custo de R$${custototal},você perdeu 15% da safra por falta de monitoramento e obteve uma receita bruta de R$ ${vendatotal},
          onde o seu lucro foi R$ ${vendatotal - custototal - desperdicio}<br><br>`
 
         mostrar.innerHTML+=`<H4> Utilizando nossa solução: </H4>
         Você plantou ${qtdhectare} hectare (s), teve o total de ${totalplantas} de plantas por hectare,
         custo de R$${custototal}, com o nosso sistema monitorando 24 horas por dia,
-         você reduziu as suas perdas a 20% e obteve uma receita bruta de R$ ${vendatotal}, onde o seu lucro foi R$ ${vendatotal - custototal - desperdiciosolu}`
-0
+         você reduziu as suas perdas a 5% e obteve uma receita bruta de R$ ${vendatotal}, onde o seu lucro foi R$ ${vendatotal - custototal - desperdiciosolu}`
     }
 
 
